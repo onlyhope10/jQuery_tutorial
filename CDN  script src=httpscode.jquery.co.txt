@@ -1,0 +1,32 @@
+CDN:  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+
+
+Deprecated 3.5
+
+.ajaxComplete()
+.ajaxError()
+.ajaxSend()
+.ajaxStart()
+.ajaxStop()
+.ajaxSuccess()
+jQuery.trim()
+
+
+jQuery mobile no longer supported
+
+
+AVAILABLE
+
+JQuery.ajax()
+JQuery.ajaxPrefilter()
+JQuery.ajaxSetup() ---> not recommended to use
+jQuery.ajaxTransport()
+jQuery.get()
+jQuery.getJSON()
+jQuery.getScript()
+jQuery.param()
+jQuery.post()
+.load()
+.serialize()
+.serializeArray()

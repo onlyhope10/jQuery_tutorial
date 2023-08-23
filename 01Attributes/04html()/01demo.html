@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>demo1</title>
+    <style>
+        p {
+          margin: 8px;
+          font-size: 20px;
+          color: blue;
+          cursor: pointer;
+        }
+        b {
+          text-decoration: underline;
+        }
+        button {
+          cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <!-- Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element.
+    Contents:
+    01 html()
+    .html()
+    .html( htmlString )
+    .html( htmlString )
+    .html( function ) -->
+
+    <!-- Click a paragraph to convert it from html to text. -->
+    <p>
+        <b>Click</b> to change the <span id="tag">html</span>
+      </p>
+      <p>
+        to a <span id="text">text</span> node.
+      </p>
+      <p>
+        This <button name="nada">button</button> does nothing.
+      </p>
+
+
+      <script>
+        $( "p" ).on( "click", function() {
+          var htmlString = $( this ).html();
+          $( this ).text( htmlString );
+        });
+        </script>
+</body>
+</html>

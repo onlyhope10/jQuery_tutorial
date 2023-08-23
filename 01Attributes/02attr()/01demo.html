@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>Attribute demo 1</title>
+    <style>
+     p {
+        margin: 20px 0 0;
+    }
+    b {
+        color: blue;
+    }
+    </style>
+</head>
+<body>
+    <!-- The .attr() method gets the attribute value for only the first element in the matched set. To get the value for each element individually, use a looping construct such as jQuery's .each() or .map() method. -->
+    <input type="checkbox" id="check1" checked="checked">
+    <label for="check1">Check me</label>
+    <p></p>
+
+    <script>
+        // Display the checked attribute and property of a checkbox as it changes.
+        $("input").on("change", function() {
+            var $input = $(this);
+            $('p').html("attr('checked'): <b>" + $input.attr("checked") + "</b><br>" + ".prop('checked'): <b>" + $input.prop("checked") + "</b></br>" + "is(':checked'): <b>" + $input.is(":checked") + "</b>");
+        })
+        .trigger("change");
+    </script>
+</body>
+</html>

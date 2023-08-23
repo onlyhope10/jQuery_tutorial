@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>Attribute demo 4</title>
+    <style>
+        div {
+          color: blue;
+        }
+        span {
+          color: red;
+        }
+        b {
+          font-weight: bolder;
+        }
+        </style>
+</head>
+<body>
+    <!-- Set the id for divs based on the position in the page. -->
+    <div>Zero-th <span></span></div>
+    <div>First <span></span></div>
+    <div>Second <span></span></div>
+    
+    <script>
+    $('div').attr('id', function(arr){
+        return "div-id" + arr;
+    })
+    .each(function() {
+        $('span', this).html("id= '<b>" + this.id + "</b>'");
+    });
+    </script>
+</body>
+</html>

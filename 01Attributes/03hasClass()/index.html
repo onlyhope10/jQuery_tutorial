@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <title>has Class demo</title>
+</head>
+<body>
+    <!-- Determine whether any of the matched elements are assigned the given class. -->
+    <!-- The .hasClass() method will return true if the class is assigned to an element, even if other classes also are.  -->
+    <p>This paragraph is black and is the first paragraph.</p>
+    <p class="selected">This paragraph is red and is the second paragraph.</p>
+    <div id="result1">First paragraph has selected class: </div>
+    <div id="result2">Second paragraph has selected class: </div>
+    <div id="result3">At least one paragraph has selected class: </div>
+    
+    <script>
+    $( "#result1" ).append( $( "p" ).first().hasClass( "selected" ).toString() );
+    $( "#result2" ).append( $( "p" ).last().hasClass( "selected" ).toString() );
+    $( "#result3" ).append( $( "p" ).hasClass( "selected" ).toString() ) ;
+</script>
+</body>
+</html>

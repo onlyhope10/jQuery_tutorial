@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class DEMO</title>
+    <style>
+        p {
+          margin: 8px;
+          font-size: 16px;
+        }
+        .selected {
+          color: blue;
+        }
+        .highlight {
+          background: yellow;
+        }
+
+        div {
+            background: white;
+        }
+        .red {
+            background: red;
+        }
+        .green {
+            background: green;
+        }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        
+</head>
+<body>
+    <!-- <p>Hello</p>
+    <p>and</p>
+    <p>Goodbye</p> -->
+
+        
+    <div>This div should be white</div>
+    <div class="red">This div will be green because it now has the "green" and "red" classes.
+    It would be red if the addClass function failed.</div>
+    <div>This div should be white</div>
+    <p>There are zero green divs</p>
+
+    <script>
+        // add class
+        // $("p").last().addClass("selected ");
+
+        // add more than one 
+        // $("p").last().addClass("selected  highlight");
+
+        // This method is often used with .removeClass() to switch elements' classes from one to another, like so:
+        // $( "p" ).removeClass( "myClass noClass" ).addClass( "yourClass" );
+
+        // As of jQuery 1.4, the .addClass() method's argument can receive a function.
+        // $( "ul li" ).addClass(function( index ) {
+        // return "item-" + index;
+        // });
+
+        // Add the classes "selected" and "highlight" to the matched elements (3.3+ syntax).
+        // $( "p" ).last().addClass( [ "selected", "highlight" ] );
+
+        // Pass in a function to .addClass() to add the "green" class to a div that already has a "red" class.
+
+        $("div").addClass(function(index, currentClass){
+          var addedClass;
+          if(currentClass === "red"){
+            addedClass = "green";
+            $("p").text("There is one green div");
+          }
+          return addedClass;
+        });
+
+    </script>
+</body>
+</html>
